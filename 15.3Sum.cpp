@@ -26,10 +26,10 @@ public:
         }
         sort(nums.begin(),nums.end());
         
-        for(int i = 0; i < nums.size() - 2; ++i){//先做k-2次循环
+        for(int i = 0; i < nums.size() - 2; ++i){//先做k-2层循环，这里K等于3,，所以只需要做一次循环
             int j = i + 1;
             int k = nums.size()-1;
-            while(j < k){//两头夹逼
+            while(j < k){//最内层循环里两头夹逼
                 vector<int> tmp;
                 if(nums[i]+nums[k]+nums[j] == 0){
                     tmp.push_back(nums[i]);

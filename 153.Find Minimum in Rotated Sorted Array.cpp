@@ -65,6 +65,9 @@ public:
             else if(nums[mid] < nums[left]){
                 right = mid;
             }
+            else{
+                left++; // 如果数组中有重复元素的话，就跳过第一个
+            }
         }
 
         return min(nums[left],nums[right]);
