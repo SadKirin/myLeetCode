@@ -30,6 +30,7 @@ public:
         ListNode* cur = prev->next;
         for(int i = m; i < n; ++i){//保证cur是prev的下一个节点
             prev->next = cur->next;
+            //尾插法
             cur->next = head2->next;
             head2->next = cur;
             cur = prev->next;
